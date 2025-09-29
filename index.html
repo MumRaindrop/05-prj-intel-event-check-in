@@ -70,14 +70,29 @@
           <div class="team-card water">
             <span class="team-name">🌊 Team Water Wise</span>
             <span class="team-count" id="waterCount">0</span>
+            <div class="team-attendees" id="waterListWrapper">
+              <ul class="team-attendees-list" id="waterList">
+                <!-- water attendees -->
+              </ul>
+            </div>
           </div>
           <div class="team-card zero">
             <span class="team-name">🌿 Team Net Zero</span>
             <span class="team-count" id="zeroCount">0</span>
+            <div class="team-attendees" id="zeroListWrapper">
+              <ul class="team-attendees-list" id="zeroList">
+                <!-- zero attendees -->
+              </ul>
+            </div>
           </div>
           <div class="team-card power">
             <span class="team-name">⚡ Team Renewables</span>
             <span class="team-count" id="powerCount">0</span>
+            <div class="team-attendees" id="powerListWrapper">
+              <ul class="team-attendees-list" id="powerList">
+                <!-- power attendees -->
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -92,6 +107,22 @@
       >
     </footer>
 
+    <!-- Quick test controls -->
+    <div style="position:fixed; right:18px; bottom:18px; display:flex; gap:8px; z-index:999;">
+      <button id="fillBtn" style="background:#0ea5e9;color:#fff;border:none;padding:10px 12px;border-radius:8px;cursor:pointer;">Fill 50</button>
+      <button id="clearBtn" style="background:#ef4444;color:#fff;border:none;padding:10px 12px;border-radius:8px;cursor:pointer;">Clear</button>
+    </div>
+
+    <!-- Celebration overlay -->
+    <div id="celebrationOverlay" style="display:none;position:fixed;inset:0;align-items:center;justify-content:center;background:rgba(0,0,0,0.6);z-index:1000;">
+      <div id="celebrationCard" style="background:white;padding:30px 26px;border-radius:12px;max-width:520px;text-align:center;">
+        <h2 id="celebrationTitle" style="margin-bottom:10px;font-size:22px;color:#0b61a7;">Goal reached!</h2>
+        <p id="celebrationMessage" style="font-size:18px;color:#0f172a;margin-bottom:12px;">Congrats to <strong id="winningTeamLabel">Team</strong> for winning.</p>
+        <button id="closeCelebration" style="background:#0071c5;color:#fff;border:none;padding:10px 12px;border-radius:8px;cursor:pointer;">Close</button>
+      </div>
+    </div>
+
+    <script src="data.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

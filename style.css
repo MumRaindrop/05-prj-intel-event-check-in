@@ -342,6 +342,77 @@ select {
   color: #475569;
 }
 
+/* Per-team attendee lists inside each team card */
+.team-attendees {
+  margin-top: 12px;
+}
+
+.team-attendees-list {
+  list-style: none;
+  margin: 0;
+  padding: 8px;
+  border-radius: 8px;
+  max-height: 160px;
+  overflow: auto;
+}
+
+.team-attendees-list li {
+  padding: 6px 8px;
+  border-radius: 6px;
+  margin-bottom: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  background: rgba(255,255,255,0.6);
+}
+
+/* Faded background colors matching team cards */
+.team-card.water .team-attendees-list {
+  background: rgba(0, 151, 214, 0.06); /* light blue */
+}
+.team-card.zero .team-attendees-list {
+  background: rgba(16, 185, 129, 0.06); /* light green */
+}
+.team-card.power .team-attendees-list {
+  background: rgba(245, 158, 11, 0.06); /* light amber */
+}
+
+/* Per-team attendee lists inside each team card */
+.team-attendees {
+  margin-top: 12px;
+}
+
+.team-attendees-list {
+  list-style: none;
+  margin: 0;
+  padding: 8px;
+  border-radius: 8px;
+  max-height: 160px;
+  overflow: auto;
+}
+
+.team-attendees-list li {
+  padding: 6px 8px;
+  border-radius: 6px;
+  margin-bottom: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+/* Faded background colors matching team cards */
+.team-card.water .team-attendees-list {
+  background: rgba(14,167,233,0.08); /* light blue */
+}
+.team-card.zero .team-attendees-list {
+  background: rgba(16,185,129,0.06); /* light green */
+}
+.team-card.power .team-attendees-list {
+  background: rgba(245,158,11,0.06); /* light amber */
+}
+
 /* Mobile responsive */
 @media (max-width: 768px) {
   .hero {
@@ -375,4 +446,25 @@ select {
   .teams-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* Celebration overlay styles */
+#celebrationOverlay {
+  display: none; /* shown via inline style or JS */
+  align-items: center;
+  justify-content: center;
+}
+
+#celebrationCard {
+  box-shadow: 0 10px 40px rgba(2,6,23,0.4);
+}
+
+.winning-water {
+  color: #0369a1;
+}
+.winning-zero {
+  color: #047857;
+}
+.winning-power {
+  color: #b45309;
 }
